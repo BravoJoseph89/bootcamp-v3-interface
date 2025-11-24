@@ -2,12 +2,12 @@
 import "./globals.css";
 
 // Fonts
-import { Lexend } from "next/font/google"
-const lexend = Lexend({ subsets: ['latin']})
+import { Lexend } from 'next/font/google'
+const lexend = Lexend({ subsets: ['latin'] })
 
 export const metadata = {
   title: "DAPP Exchange",
-  description: "Your favorite peer to peer orderbook exchange",
+  description: "Your favorite Peer to peer orderbook exchange",
 };
 
 export default function RootLayout({ children }) {
