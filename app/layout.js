@@ -7,6 +7,7 @@ const lexend = Lexend({ subsets: ['latin']})
 
 // Components
 import MetaMaskProvider from "./components/Providers/MetaMaskProvider";
+import StoreProvider from "./components/Providers/StoreProvider";
 import TopNav from "./components/TopNav"
 
 export const metadata = {
@@ -16,8 +17,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <MetaMaskProvider>
-      <html lang="en">
+    <StoreProvider>
+      <MetaMaskProvider>
+        <html lang="en">
           <body className={`${lexend.className}`}>
             <main className="content">
               <TopNav />
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
             </main>
           </body>
         </html>
-    </MetaMaskProvider>
+      </MetaMaskProvider>
+    </StoreProvider>
   );
 }
